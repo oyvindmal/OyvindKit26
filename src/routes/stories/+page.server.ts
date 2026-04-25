@@ -7,15 +7,11 @@ export const load = (async () => {
     baseURL: `${env.STRAPI_URL}/api`,
   });
 
-  const homepage = client.single("front-page");
+  const homepage = client.collection("stories");
 
-  const defaultHomepage = await homepage.find({
-    params: {
-      populate: "*",
-    },
-  });
+  const stories = await homepage.find();
 
   return {
-    page: defaultHomepage,
+    page: stories
   };
 }) satisfies PageServerLoad;

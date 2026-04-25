@@ -2,20 +2,16 @@ import { env } from "$env/dynamic/private";
 import type { PageServerLoad } from "./$types";
 import { strapi } from "@strapi/client";
 
-export const load = (async () => {
+export const load = (async ( {params} ) => {
   const client = strapi({
     baseURL: `${env.STRAPI_URL}/api`,
   });
+console.log(params.id);
+  const homepage = client.collection("stories");
 
-  const homepage = client.single("front-page");
-
-  const defaultHomepage = await homepage.find({
-    params: {
-      populate: "*",
-    },
-  });
+  const stories = await homepage.findOne(params.id);
 
   return {
-    page: defaultHomepage,
+    page: stories
   };
 }) satisfies PageServerLoad;
