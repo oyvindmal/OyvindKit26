@@ -16,7 +16,7 @@
                 <img src="{data.base + item.File.formats.medium.url}" alt="">
             {/if}
             {#if !item.File.formats}
-                <p>lol</p>
+                
                 <video class="slide-video" autoplay="true" muted="true" src="{data.base + item.File.url}"></video>
             {/if}
         </div>
