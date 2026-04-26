@@ -15,3 +15,8 @@ header {
     position:sticky;
     color:#ffa406;
 }
+
+header a {
+     color:#ffa406;
+     text-decoration: none;
+}
