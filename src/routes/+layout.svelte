@@ -10,5 +10,7 @@
 	<link rel="icon" href={favicon} />
 	
 </svelte:head>
-<h1>JAHA</h1>
+<header>
+	<h1>Øyvind Malin</h1>
+</header>
 {@render children()}
