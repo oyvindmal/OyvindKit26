@@ -3,8 +3,6 @@
 
     let { data }: PageProps = $props();
 
-    console.log(data.page.data.Media);
-    console.log(data.base);
 </script>
 <a href="/stories">Tilbake</a>
 <h1>{ data.page.data.Title}</h1>

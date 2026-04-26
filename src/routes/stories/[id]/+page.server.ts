@@ -6,7 +6,7 @@ export const load = (async ( {params} ) => {
   const client = strapi({
     baseURL: `${env.STRAPI_URL}/api`,
   });
-console.log(params.id);
+
   const homepage = client.collection("stories");
 
 const story = await homepage.findOne(params.id, {

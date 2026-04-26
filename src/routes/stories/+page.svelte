@@ -2,7 +2,7 @@
     import type { PageProps } from './$types';
 
     let { data }: PageProps = $props();
-    console.log(data.page);
+   
 </script>
 <h1>Stories</h1>
 <ul>

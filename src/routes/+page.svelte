@@ -1,6 +1,6 @@
 <script lang="ts">
     const { data } = $props();
-    console.log(data);
+    
 </script>
 
 <h1>Welcome to SvelteKit</h1>
