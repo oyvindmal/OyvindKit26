@@ -9,9 +9,13 @@ export const load = (async ( {params} ) => {
 console.log(params.id);
   const homepage = client.collection("stories");
 
-  const stories = await homepage.findOne(params.id);
+const story = await homepage.findOne(params.id, {
+  populate: {
+    Media: "*"
+  }
+});
 
   return {
-    page: stories
+    page: story
   };
 }) satisfies PageServerLoad;
