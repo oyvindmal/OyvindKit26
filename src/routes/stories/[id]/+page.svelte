@@ -7,7 +7,7 @@
 <a href="/stories">Tilbake</a>
 <h1>{ data.page.data.Title}</h1>
 <p>{data.page.data.Beskrivelse}</p>
-<div class="stories">
+<div id="stories">
       	{#each data.page.data.Media as item}
 		<div class="storyitem">
             {#if item.File.formats}

@@ -16,7 +16,29 @@ header {
     color:#ffa406;
 }
 
+.white-text {
+    color: #FFF;
+}
+
 header a {
      color:#ffa406;
      text-decoration: none;
+}
+
+#stories {
+    width:100%;
+    display: grid; 
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+}
+
+.storyitem {
+        height:100vh;
+        text-align: center;
+
+        video {
+            width:100%;
+            height:100%;
+        }
 }

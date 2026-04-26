@@ -11,6 +11,6 @@
 	
 </svelte:head>
 <header>
-	<h1><a href="/">Øyvind Malin</a></h1>
+	<h1><a href="/"><span class="white-text">Ø</span>yvind Malin</a></h1>
 </header>
 {@render children()}
