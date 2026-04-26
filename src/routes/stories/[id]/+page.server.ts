@@ -11,11 +11,12 @@ console.log(params.id);
 
 const story = await homepage.findOne(params.id, {
   populate: {
-    Media: "*"
+    Media: {populate: "*"}
   }
 });
 
   return {
-    page: story
+    page: story,
+    base : env.STRAPI_URL
   };
 }) satisfies PageServerLoad;
